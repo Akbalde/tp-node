@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devoir </title>
+      <!-- <link rel="stylesheet" type="text/css" href="styles.css">
+       <link rel="stylesheet" type="text/js" href="index.js"> -->
+
+<style type="text/css">
+    *{
+        margin:10px;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        
+
+    }
+    form{
+    max-width: 600px;
+    background-color: rgb(54, 52, 53);
+    border: 15px;
+    margin: auto;
+    padding: 10px;
+    
+    
+}
+
+
+input{
+    width: 50%;
+    padding: 5px;
+    box-shadow: 4px black;
+    border-radius: 3px;
+}
+.rad{
+    width: auto;
+}
+
+
+
+
+#btn-envoyer{
+    margin-left:50%; 
+    padding: 10px;
+    width: 30%;
+    background-color: #130795;
+    color:white ;
+    cursor:pointer;
+    display: block;
+    border-radius: 2px;
+    box-shadow: 5px black;
+    
+    
+}
+</style>
+</head>
+<body>
+    <form action="/submit" enctype="multipart/from-data" method="POST">
+       
+        <div><label for="nom">Nom:</label>
+            <input type="text" id="nom"   placeholder="votre nom"  name="nom" required></div>
+        
+       <div><label for="nom">Prenom:</label>
+        <input type="text" id="Prenom" placeholder="votre prenom" name="Prenom" required>
+       </div>
+        <div>
+            <label>Genre:</label>
+        <input type="radio" id="H" name="genre" value="homme" class="rad"><label> Homme</label>
+        
+        <input type="radio" id="F" name="genre" value="femme"  class="rad">
+        <label for="">femme</label>
+        
+        </div>
+        
+       <div>
+        <label for="pays">Pays:</label>
+        <select id="pays" name="pays"> </select>
+       </div>
+        
+        <div>
+            <label for="auteurs">Auteurs:</label>
+        <select id="auteurs" name="auteurs"></select>
+
+
+        </div>
+        <div>
+            <label for="cv">CV:</label>
+            <input type="file" id="cv" name="cv" accept=".pdf" required>
+            
+        </div>
+        
+        <div>
+            <label for="images">Images:</label>
+            <input type="file" id="images" name="images" accept=".jpg,png,gif"multiple>
+    
+        </div>
+        
+        
+        <input type="submit" value="Envoyer" id="btn-envoyer">
+
+
+    
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="api.js"></script>
+</body>
+</html>
